@@ -1,0 +1,136 @@
+const gulp = require('gulp');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const concat = require('gulp-concat');
+const gls = require('gulp-live-server');
+const buffer = require('vinyl-buffer');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync');
+const del = require('del');
+
+const  paths = {
+  html : [ 'app/default.html' ],
+  css : [ 'app/public/styles/**/*.*css' ],
+  images : [ 'app/public/images' ],
+  jsx : [ 'app/pages/landing.jsx' ],
+  js : [ 'app/public/scripts/**/*.js' ],
+  vendors: {
+    base: [ 'node_modules/jquery/dist/jquery.min.js' ],
+    scripts: [
+      'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+      'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/bezier-easing/dist/bezier-easing.min.js',
+      'node_modules/jquery.cookie/jquery.cookie.js',
+    ],
+    fonts: [
+      'node_modules/slick-carousel/slick/fonts/**/*'
+    ],
+    statics: [
+      'node_modules/slick-carousel/slick/ajax-loader.gif'
+    ]
+  }
+};
+
+const dest = {
+  dist: [ './dist/' ],
+  css: [ './dist/public/css/' ],
+  fonts: [ './dist/public/fonts/' ],
+  images: [ './dist/public/images/' ],
+  scripts: [ './dist/public/scripts/' ],
+  statics: [ './dist/public/images/statics' ],
+};
+
+gulp.task('html', function() {
+  return gulp.src(paths.html)
+    .pipe(concat('landing.html'))
+    .pipe(gulp.dest(dest.dist));
+});
+
+gulp.task('styles', function() {
+  return gulp.src(paths.css)
+  .pipe(concat('main.css'))
+  .pipe(gulp.dest(dest.css));
+});
+
+gulp.task('images', function() {
+  return gulp.src(paths.images)
+  .pipe(gulp.dest(dest.images));
+});
+
+gulp.task('jQuery', function() {
+  return gulp.src(paths.vendors.base)
+    .pipe(gulp.dest(dest.scripts));
+});
+
+gulp.task('jsx', function() {
+  return browserify(paths.jsx)
+    .transform(babelify)
+    .bundle()
+    .on('error', (err)=>{
+      console.log('JS Error', err);
+    })
+    .pipe(source('react.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest(dest.scripts));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src(paths.js)
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest(dest.scripts));
+});
+
+gulp.task('fontsVendor', function() {
+  return gulp.src(paths.vendors.fonts)
+    .pipe(gulp.dest(dest.fonts));
+});
+
+gulp.task('scriptsVendor', function() {
+  return gulp.src(paths.vendors.scripts)
+    .pipe(concat('vendors.min.js'))
+    .pipe(gulp.dest(dest.scripts));
+});
+
+gulp.task('staticsVendor', function() {
+  return gulp.src(paths.vendors.statics)
+    .pipe(gulp.dest(dest.statics));
+});
+
+const reload = function(done) {
+  browserSync.reload();
+  done();
+};
+
+gulp.task('watch', function() {
+  gulp.watch(paths.html, gulp.series('html', reload));
+  gulp.watch(paths.css,  gulp.series('styles', reload));
+  gulp.watch(paths.images,  gulp.series('images', reload));
+  gulp.watch(paths.vendors.base,  gulp.series('jQuery', reload));
+  gulp.watch(paths.js,  gulp.series('scripts', reload));
+  gulp.watch(paths.jsx,  gulp.series('jsx', reload));
+  gulp.watch(paths.vendors.fonts,  gulp.series('fontsVendor', reload));
+  gulp.watch(paths.vendors.statics,  gulp.series('staticsVendor', reload));
+  gulp.watch(paths.vendors.scripts,  gulp.series('scriptsVendor', reload));
+});
+
+const server = function() {
+  browserSync({
+    notify: false,
+    port: 8080,
+    server: {
+      baseDir: [ `${dest.dist}` ],
+      index: 'pages.html'
+    },
+    startPath: 'landing.html'
+  });
+};
+
+const clean = function() {
+  return del(`${dest.dist}`);
+};
+
+gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jQuery', 'fontsVendor', 'scripts', 'staticsVendor', 'jsx', 'scriptsVendor')));
+
+gulp.task('dev', gulp.series('build', server, gulp.parallel('watch')));

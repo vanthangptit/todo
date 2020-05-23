@@ -1,0 +1,3 @@
+(function() {
+  // Code logic here
+})();

@@ -1,0 +1,44 @@
+{
+  "name": "gulp-render-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "gulp render react",
+    "react",
+    "views"
+  ],
+  "author": "Danie",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-live-server": "0.0.31",
+    "gulp-uglify": "^3.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "bezier-easing": "^2.1.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "jquery.cookie": "^1.4.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
