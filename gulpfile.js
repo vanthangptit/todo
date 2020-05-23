@@ -3,17 +3,18 @@ const browserify = require('browserify');
 const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const concat = require('gulp-concat');
-const gls = require('gulp-live-server');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync');
 const del = require('del');
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 
-const  paths = {
+const paths = {
   html : [ 'app/default.html' ],
-  css : [ 'app/public/styles/**/*.*css' ],
-  images : [ 'app/public/images' ],
-  jsx : [ 'app/pages/landing.jsx' ],
+  css : [ 'app/public/styles/main.scss' ],
+  images : [ 'app/public/images/**/*.*' ],
+  jsx : [ 'app/layouts/default.jsx' ],
   js : [ 'app/public/scripts/**/*.js' ],
   vendors: {
     base: [ 'node_modules/jquery/dist/jquery.min.js' ],
@@ -24,7 +25,8 @@ const  paths = {
       'node_modules/jquery.cookie/jquery.cookie.js',
     ],
     fonts: [
-      'node_modules/slick-carousel/slick/fonts/**/*'
+      'node_modules/slick-carousel/slick/fonts/**/*',
+      'app/public/fonts/*.*'
     ],
     statics: [
       'node_modules/slick-carousel/slick/ajax-loader.gif'
@@ -49,6 +51,7 @@ gulp.task('html', function() {
 
 gulp.task('styles', function() {
   return gulp.src(paths.css)
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(concat('main.css'))
   .pipe(gulp.dest(dest.css));
 });
@@ -103,7 +106,18 @@ const reload = function(done) {
   done();
 };
 
-gulp.task('watch', function() {
+const server = function() {
+  browserSync.init({
+    notify: false,
+    port: 8080,
+    server: {
+      baseDir: [ `${dest.dist}` ],
+      index: 'pages.html'
+    },
+    startPath: 'landing.html'
+  });
+
+  // // Detect change -> rebuild TS
   gulp.watch(paths.html, gulp.series('html', reload));
   gulp.watch(paths.css,  gulp.series('styles', reload));
   gulp.watch(paths.images,  gulp.series('images', reload));
@@ -113,18 +127,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.vendors.fonts,  gulp.series('fontsVendor', reload));
   gulp.watch(paths.vendors.statics,  gulp.series('staticsVendor', reload));
   gulp.watch(paths.vendors.scripts,  gulp.series('scriptsVendor', reload));
-});
-
-const server = function() {
-  browserSync({
-    notify: false,
-    port: 8080,
-    server: {
-      baseDir: [ `${dest.dist}` ],
-      index: 'pages.html'
-    },
-    startPath: 'landing.html'
-  });
 };
 
 const clean = function() {
@@ -133,4 +135,4 @@ const clean = function() {
 
 gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jQuery', 'fontsVendor', 'scripts', 'staticsVendor', 'jsx', 'scriptsVendor')));
 
-gulp.task('dev', gulp.series('build', server, gulp.parallel('watch')));
+gulp.task('dev', gulp.series('build', server));

@@ -1,0 +1,57 @@
+// container
+.container-fluid {
+  max-width: $container-max-width;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+// text utilities
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-left {
+  justify-content: flex-start;
+}
+
+.flex-right {
+  justify-content: flex-end;
+}
+
+.flex-middle {
+  align-items: center;
+}

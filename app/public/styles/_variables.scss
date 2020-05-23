@@ -1,0 +1,30 @@
+// break points
+$break-point-360: 360px;
+$break-point-576: 576px;
+$break-point-768: 768px;
+$break-point-992: 992px;
+$break-point-1200: 1200px;
+$break-max-point: $break-point-1200;
+
+$media-xs: '(min-width: #{$break-point-576})';
+$media-sm: '(min-width: #{$break-point-768})';
+$media-md: '(min-width: #{$break-point-992})';
+$media-lg: '(min-width: #{$break-point-1200})';
+
+// font variables
+$font-roboto: 'Roboto', sans-serif;
+$font-family-base: $font-roboto;
+
+// font-size-base
+$font-base: 16px;
+
+$min-vw: 360px;
+$max-vw: 1200px;
+
+$headings-line-height:  1.2;
+
+//container width
+$container-max-width: $break-max-point
+
+//color
+
