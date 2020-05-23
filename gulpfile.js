@@ -12,7 +12,7 @@ sass.compiler = require('node-sass');
 
 const paths = {
   html : [ 'app/default.html' ],
-  css : [ 'app/public/styles/main.scss' ],
+  css : [ 'app/public/styles/**/*.scss' ],
   images : [ 'app/public/images/**/*.*' ],
   jsx : [ 'app/layouts/default.jsx' ],
   js : [ 'app/public/scripts/**/*.js' ],
@@ -117,7 +117,7 @@ const server = function() {
     startPath: 'landing.html'
   });
 
-  // // Detect change -> rebuild TS
+  // Detect change -> rebuild TS
   gulp.watch(paths.html, gulp.series('html', reload));
   gulp.watch(paths.css,  gulp.series('styles', reload));
   gulp.watch(paths.images,  gulp.series('images', reload));
@@ -127,6 +127,8 @@ const server = function() {
   gulp.watch(paths.vendors.fonts,  gulp.series('fontsVendor', reload));
   gulp.watch(paths.vendors.statics,  gulp.series('staticsVendor', reload));
   gulp.watch(paths.vendors.scripts,  gulp.series('scriptsVendor', reload));
+  gulp.watch('app/templates/components/**/*.*',  gulp.series(reload));
+  gulp.watch('app/pages/*.*',  gulp.series(reload));
 };
 
 const clean = function() {
