@@ -1,0 +1,64 @@
+.header-top {
+  display: flex;
+  padding: 10px 0;
+
+  &__left {
+    display: flex;
+    flex: 1 0 auto;
+
+    span {
+      display: inline-block;
+      font-size: 13px;
+      margin-right: 10px;
+
+      &::before {
+        font: normal normal normal 14px/1 FontAwesome;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__address {
+    &::before {
+      content: "\f041";
+    }
+  }
+
+  &__phone {
+    &::before {
+      content: "\f095";
+    }
+  }
+
+  &__email {
+    &::before {
+      content: "\f0e0";
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    a {
+      display: inline-block;
+      font-size: 13px;
+      padding: 0 5px;
+    }
+  }
+
+  &__language {
+    & > a {
+      margin-right: 20px;
+
+      &::after {
+        content: "\f0d7";
+        font: normal normal normal 14px/1 FontAwesome;
+        padding: 0 5px;
+      }
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}

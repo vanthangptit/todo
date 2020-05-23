@@ -1,26 +1,11 @@
-$color-primary: #16b09c;
-$color-secondary: #eb6028;
-$color-tertiary: #003949;
+$color-primary: #333333;
+$color-secondary: #fefefe;
+$color-tertiary: #bc2e1d;
 
 $theme-colors: (
   "primary": $color-primary,
   "secondary": $color-secondary,
   "tertiary": $color-tertiary,
-);
-
-$color-hover-lighten: 10%;
-$color-active-lighten: 20%;
-
-$hover-colors: (
-  "primary": #5eb0a2,
-  "secondary": #f2844f,
-  "tertiary": #365363
-);
-
-$active-colors: (
-  "primary": #c0e1da,
-  "secondary": #fbc6a7,
-  "tertiary": #939da9
 );
 
 $color-white: #fff !default;
@@ -35,22 +20,38 @@ $color-gray-800: #393939 !default;
 $color-gray-900: #212529 !default;
 $color-black: #000 !default;
 
-$grays: (
-  "100": $color-gray-100,
-   "200": $color-gray-200,
-  "300": $color-gray-300,
-   "400": $color-gray-400,
-  "500": $color-gray-500,
-  "600": $color-gray-600,
-  "700": $color-gray-700,
-  "800": $color-gray-800,
-   "900": $color-gray-900
+$backgrounds: (
+  "primary": $color-secondary,
+  "secondary": #001c37
 );
 
-$backgrounds: (
+$text-bg: (
   "primary": $color-primary,
-  "secondary": $color-secondary,
-  "tertiary": $color-tertiary,
-  "gray-100": $color-gray-100,
+  "secondary": $color-secondary
 );
+
+$text-colors: map_merge(
+  $theme-colors,
+  (
+    "white": $color-white,
+    "light": $color-gray-300,
+    "dark": $color-gray-900,
+  )
+);
+
+@each $color, $value in $text-colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+@each $color, $value in $backgrounds {
+  .bg-#{$color} {
+    background-color: $value;
+
+    * {
+      box-shadow: map-get($text-bg, $color);
+    }
+  }
+}
 

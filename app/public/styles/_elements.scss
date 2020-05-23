@@ -110,6 +110,7 @@ strong {
 a {
   color: $link-color;
   background-color: transparent;
+  text-decoration: none;
 
   &:focus {
     outline: none;

@@ -4,7 +4,8 @@ $break-point-576: 576px;
 $break-point-768: 768px;
 $break-point-992: 992px;
 $break-point-1200: 1200px;
-$break-max-point: $break-point-1200;
+$break-point-1230: 1230px;
+$break-max-point: $break-point-1230;
 
 $media-xs: '(min-width: #{$break-point-576})';
 $media-sm: '(min-width: #{$break-point-768})';

@@ -1,6 +1,9 @@
 // container
-.container-fluid {
+#root{
   max-width: $container-max-width;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .pull-left {
