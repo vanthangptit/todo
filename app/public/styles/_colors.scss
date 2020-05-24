@@ -21,7 +21,7 @@ $color-gray-900: #212529 !default;
 $color-black: #000 !default;
 
 $backgrounds: (
-  "primary": $color-secondary,
+  "primary": #fefefe,
   "secondary": #001c37
 );
 
@@ -39,19 +39,5 @@ $text-colors: map_merge(
   )
 );
 
-@each $color, $value in $text-colors {
-  .text-#{$color} {
-    color: $value;
-  }
-}
-
-@each $color, $value in $backgrounds {
-  .bg-#{$color} {
-    background-color: $value;
-
-    * {
-      box-shadow: map-get($text-bg, $color);
-    }
-  }
-}
-
+//color components
+$bg-navbar-nav-mobile: #001c37;

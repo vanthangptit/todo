@@ -1,4 +1,4 @@
-.header-top {
+.inform {
   display: flex;
   padding: 10px 0;
 
@@ -60,5 +60,9 @@
     ul {
       display: none;
     }
+  }
+
+  @media #{$media-sm} {
+    display: none;
   }
 }

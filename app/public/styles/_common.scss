@@ -1,9 +1,6 @@
 // container
-#root{
+.container {
   max-width: $container-max-width;
-  margin: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .pull-left {
@@ -57,4 +54,20 @@
 
 .flex-middle {
   align-items: center;
+}
+
+@each $color, $value in $text-colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+@each $color, $value in $backgrounds {
+  .bg-#{$color} {
+    background-color: $value !important;
+
+    * {
+      color: map-get($text-bg, $color);
+    }
+  }
 }

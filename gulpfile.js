@@ -127,8 +127,6 @@ const server = function() {
   gulp.watch(paths.vendors.fonts,  gulp.series('fontsVendor', reload));
   gulp.watch(paths.vendors.statics,  gulp.series('staticsVendor', reload));
   gulp.watch(paths.vendors.scripts,  gulp.series('scriptsVendor', reload));
-  gulp.watch('app/templates/components/**/*.*',  gulp.series(reload));
-  gulp.watch('app/pages/*.*',  gulp.series(reload));
 };
 
 const clean = function() {
