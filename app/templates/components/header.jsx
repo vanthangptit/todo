@@ -3,7 +3,56 @@ import Inform from "./inform.jsx";
 import Nav from "./nav.jsx";
 
 const inform = {
-
+  personal: [
+    "Đắc Sở - Hoài Đức - Hà Nội",
+    "0383.249.189",
+    "nguyenthang.FE@gmail.com"
+  ],
+  language: {
+    active: {
+      href: "#",
+      text: "Vietnamese",
+    },
+    dropdown: [
+      {
+        href: "#",
+        disabled: false,
+        text: "Vietnamese"
+      },
+      {
+        href: "#",
+        disabled: true,
+        text: "English"
+      },
+      {
+        href: "#",
+        disabled: true,
+        text: "Japan"
+      }
+    ]
+  },
+  social: [
+    {
+      href: "#",
+      icon: "fa-twitter-square",
+      title: "Twitter"
+    },
+    {
+      href: "#",
+      icon: "fa-facebook",
+      title: "Facebook"
+    },
+    {
+      href: "#",
+      icon: "fa-google-plus",
+      title: "Google Plus"
+    },
+    {
+      href: "#",
+      icon: "fa-youtube-square",
+      title: "Youtube"
+    }
+  ]
 };
 
 const logo = {
@@ -92,7 +141,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="container">
-          <Inform />
+          <Inform personal={inform.personal} language={inform.language} social={inform.social}/>
         </div>
 
         <Nav logo={logo} menu={menu}/>

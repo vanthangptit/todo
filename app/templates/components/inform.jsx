@@ -1,31 +1,59 @@
 import React from 'react';
 
 class Inform extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLanguageDropdown: false,
+    };
+
+    this.handleClickLanguageDropdown = this.handleClickLanguageDropdown.bind(this);
+  }
+
+  handleClickLanguageDropdown(e) {
+    e.preventDefault();
+
+    this.setState(state => ({
+      isLanguageDropdown: !state.isLanguageDropdown
+    }));
+  }
+
   render() {
+    const isShowNavBar = this.state.isLanguageDropdown ? ' show' : '';
+
     return (
       <div className="inform">
         <div className="inform__left">
-          <span className="inform__address">Đắc Sở - Hoài Đức - Hà Nội</span>
-          <span className="inform__phone">0383.249.189</span>
-          <span className="inform__email">nguyenthang.FE@gmail.com</span>
+          {
+            this.props.personal.map((item, index) =>
+              <span key={index}>{item}</span>
+            )
+          }
         </div>
 
         <div className="inform__right">
-          <ul className="inform__language">
-            <a href="#">Vietnamese</a>
+          <ul className={"inform__language" + isShowNavBar}>
+            <a href={this.props.language.active.href} onClick={this.handleClickLanguageDropdown}>
+              {this.props.language.active.text}
+            </a>
 
             <ul>
-              <a href="#" aria-disabled="false">Vietnamese</a>
-              <a href="#" aria-disabled="true">English</a>
-              <a href="#" aria-disabled="true">Japan</a>
+              {
+                this.props.language.dropdown.map((item, index) =>
+                  <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
+                    {item.text}
+                  </a>
+                )
+              }
             </ul>
           </ul>
 
           <ul className="inform__social">
-            <a href="#" className="fa fa-twitter-square"/>
-            <a href="#" className="fa fa-facebook"/>
-            <a href="#" className="fa fa-google-plus"/>
-            <a href="#" className="fa fa-youtube-square"/>
+            {
+              this.props.social.map((item, index) =>
+                <a href={item.href} className={"fa " + item.icon} title={item.title} key={index}/>
+              )
+            }
           </ul>
         </div>
       </div>
