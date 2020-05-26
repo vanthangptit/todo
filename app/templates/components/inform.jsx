@@ -1,4 +1,5 @@
 import React from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 class Inform extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Inform extends React.Component {
     };
 
     this.handleClickLanguageDropdown = this.handleClickLanguageDropdown.bind(this);
+    this.handleRemoveLanguageDropdown = this.handleRemoveLanguageDropdown.bind(this);
   }
 
   handleClickLanguageDropdown(e) {
@@ -15,6 +17,14 @@ class Inform extends React.Component {
 
     this.setState(state => ({
       isLanguageDropdown: !state.isLanguageDropdown
+    }));
+  }
+
+  handleRemoveLanguageDropdown(e) {
+    e.stopPropagation();
+
+    this.setState(state => ({
+      isLanguageDropdown: false
     }));
   }
 
@@ -32,21 +42,23 @@ class Inform extends React.Component {
         </div>
 
         <div className="inform__right">
-          <ul className={"inform__language" + isShowNavBar}>
-            <a href={this.props.language.active.href} onClick={this.handleClickLanguageDropdown}>
-              {this.props.language.active.text}
-            </a>
+          <OutsideClickHandler onOutsideClick={this.handleRemoveLanguageDropdown}>
+            <ul className={"inform__language" + isShowNavBar}>
+              <a href={this.props.language.active.href} onClick={this.handleClickLanguageDropdown}>
+                {this.props.language.active.text}
+              </a>
 
-            <ul>
-              {
-                this.props.language.dropdown.map((item, index) =>
-                  <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
-                    {item.text}
-                  </a>
-                )
-              }
+              <ul>
+                {
+                  this.props.language.dropdown.map((item, index) =>
+                    <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
+                      {item.text}
+                    </a>
+                  )
+                }
+              </ul>
             </ul>
-          </ul>
+          </OutsideClickHandler>
 
           <ul className="inform__social">
             {
