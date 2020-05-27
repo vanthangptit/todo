@@ -9,10 +9,7 @@ const inform = {
     "nguyenthang.FE@gmail.com"
   ],
   language: {
-    active: {
-      href: "#",
-      text: "Vietnamese",
-    },
+    activeText: "Vietnamese",
     dropdown: [
       {
         href: "#",

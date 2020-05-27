@@ -25,7 +25,7 @@ const paths = {
       'node_modules/jquery.cookie/jquery.cookie.js',
     ],
     fonts: [
-      'node_modules/slick-carousel/slick/fonts/**/*',
+      'node_modules/slick-carousel/slick/fonts/**/*.*',
       'app/public/fonts/*.*'
     ],
     statics: [

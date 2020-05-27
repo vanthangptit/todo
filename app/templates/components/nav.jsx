@@ -1,5 +1,4 @@
 import React from 'react';
-import OutsideClickHandler from 'react-outside-click-handler';
 
 class HeaderTop extends React.Component {
   constructor(props) {
@@ -12,12 +11,18 @@ class HeaderTop extends React.Component {
 
     this.handleShowMenu = this.handleShowMenu.bind(this);
     this.handleClickSubItem = this.handleClickSubItem.bind(this);
-    this.handleHideMenu = this.handleHideMenu.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   handleShowMenu() {
-    this.setState(state => ({
-      isShowNavBar: !state.isShowNavBar
+    if (!this.state.isShowNavBar) {
+      document.addEventListener('click', this.handleOutsideClick, false);
+    } else {
+      document.removeEventListener('click', this.handleOutsideClick, false);
+    }
+
+    this.setState(prevState => ({
+      isShowNavBar: !prevState.isShowNavBar,
     }));
   }
 
@@ -29,12 +34,12 @@ class HeaderTop extends React.Component {
     }));
   }
 
-  handleHideMenu(e) {
-    e.stopPropagation();
+  handleOutsideClick(e) {
+    if (this.pop.contains(e.target)) {
+      return;
+    }
 
-    this.setState(state => ({
-      isShowNavBar: false
-    }));
+    this.handleShowMenu(e);
   }
 
   render() {
@@ -53,42 +58,40 @@ class HeaderTop extends React.Component {
               <span></span>
             </div>
 
-            <OutsideClickHandler onOutsideClick={this.handleHideMenu}>
-              <ul className={"navbar-nav" + isShowNavBar}>
-                {this.props.menu.map((items, index) => {
-                  if (!items.subItems) {
-                    return (
-                      <li className="navbar-nav__item" key={index}>
-                        <a className="navbar-nav__link" href={items.link} alt={items.alt} target={items.target} title={items.title}>
-                          {items.text}
-                        </a>
-                      </li>
-                    );
-                  }
-                  else {
-                    return (
-                      <li className={"navbar-nav__item item-dropdown" + isShowSubItem } key={index}>
-                        <a className="navbar-nav__link" href={items.link} alt={items.alt} target={items.target} title={items.title} onClick={this.handleClickSubItem}>
-                          {items.text}
-                        </a>
+            <ul className={"navbar-nav" + isShowNavBar} ref={node => {this.pop = node}}>
+              {this.props.menu.map((items, index) => {
+                if (!items.subItems) {
+                  return (
+                    <li className="navbar-nav__item" key={index}>
+                      <a className="navbar-nav__link" href={items.link} alt={items.alt} target={items.target} title={items.title}>
+                        {items.text}
+                      </a>
+                    </li>
+                  );
+                }
+                else {
+                  return (
+                    <li className={"navbar-nav__item item-dropdown" + isShowSubItem } key={index}>
+                      <a className="navbar-nav__link" href={items.link} alt={items.alt} target={items.target} title={items.title} onClick={this.handleClickSubItem}>
+                        {items.text}
+                      </a>
 
-                        <ul>
-                          {items.subItems.map((item, indexItem) => {
-                            return (
-                              <li className="navbar-nav__item" key={indexItem}>
-                                <a className="navbar-nav__link" href={item.link} alt={item.alt} target={item.target}>
-                                  {item.text}
-                                </a>
-                              </li>
-                            )
-                          })}
-                        </ul>
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
-            </OutsideClickHandler>
+                      <ul>
+                        {items.subItems.map((item, indexItem) => {
+                          return (
+                            <li className="navbar-nav__item" key={indexItem}>
+                              <a className="navbar-nav__link" href={item.link} alt={item.alt} target={item.target}>
+                                {item.text}
+                              </a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
 
             {this.state.isShowNavBar === true &&
               <div className="navbar-main__backdrop"/>

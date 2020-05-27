@@ -1,0 +1,27 @@
+[
+  {
+    "href": "#",
+    "image": "./public/images/slide/slide01.png",
+    "alt": "Slide 01"
+  },
+  {
+    "href": "#",
+    "image": "./public/images/slide/slide02.png",
+    "alt": "Slide 02"
+  },
+  {
+    "href": "#",
+    "image": "./public/images/slide/slide03.png",
+    "alt": "Slide 03"
+  },
+  {
+    "href": "#",
+    "image": "./public/images/slide/slide04.png",
+    "alt": "Slide 04"
+  },
+  {
+    "href": "#",
+    "image": "./public/images/slide/slide05.png",
+    "alt": "Slide 05"
+  }
+]
