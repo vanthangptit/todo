@@ -3,6 +3,14 @@
   max-width: $container-max-width;
 }
 
+.mb-component {
+  margin-bottom: 2rem;
+
+  @media #{$media-sm} {
+    margin-bottom: 1rem;
+  }
+}
+
 .pull-left {
   float: left;
 }
