@@ -43,6 +43,7 @@ class HeaderTop extends React.Component {
   }
 
   render() {
+    const data = this.props;
     const isShowNavBar = this.state.isShowNavBar ? ' show' : '';
     const isShowSubItem = this.state.isShowSubItem ? ' open' : '';
 
@@ -50,8 +51,8 @@ class HeaderTop extends React.Component {
       <div className="nav-contain bg-secondary">
         <div className="container">
           <nav className="navbar-main">
-            <a className="nav-logo" href={this.props.logo.href} alt={this.props.logo.alt}>
-              {this.props.logo.text}
+            <a className="nav-logo" href={data.logo.href} alt={data.logo.alt}>
+              {data.logo.text}
             </a>
 
             <div className={"hamburger-icon" + isShowNavBar} onClick={this.handleShowMenu}>
@@ -59,7 +60,7 @@ class HeaderTop extends React.Component {
             </div>
 
             <ul className={"navbar-nav" + isShowNavBar} ref={node => {this.pop = node}}>
-              {this.props.menu.map((items, index) => {
+              {data.menu.map((items, index) => {
                 if (!items.subItems) {
                   return (
                     <li className="navbar-nav__item" key={index}>

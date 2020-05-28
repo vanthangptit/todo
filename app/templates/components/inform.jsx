@@ -34,13 +34,14 @@ class Inform extends React.Component {
   }
 
   render() {
+    const data = this.props;
     const isShowNavBar = this.state.isLanguageDropdown ? ' show' : '';
 
     return (
       <div className="inform">
         <div className="inform__left">
           {
-            this.props.personal.map((item, index) =>
+            data.personal.map((item, index) =>
               <span key={index}>{item}</span>
             )
           }
@@ -49,12 +50,12 @@ class Inform extends React.Component {
         <div className="inform__right">
           <ul className={"inform__language" + isShowNavBar} ref={node => {this.pop = node}}>
             <span onClick={this.handleClickLanguageDropdown}>
-              {this.props.language.activeText}
+              {data.language.activeText}
             </span>
 
             <ul>
               {this.state.isLanguageDropdown && (
-                this.props.language.dropdown.map((item, index) =>
+                data.language.dropdown.map((item, index) =>
                   <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
                     {item.text}
                   </a>
@@ -65,7 +66,7 @@ class Inform extends React.Component {
 
           <ul className="inform__social">
             {
-              this.props.social.map((item, index) =>
+              data.social.map((item, index) =>
                 <a href={item.href} className={"fa " + item.icon} title={item.title} key={index}/>
               )
             }

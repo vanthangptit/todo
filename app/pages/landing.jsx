@@ -11,7 +11,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="page-main">
-        <Header />
+        <Header data={header}/>
         <Masthead data={masthead}/>
         <Main />
         <Footer />
