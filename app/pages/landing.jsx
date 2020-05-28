@@ -1,6 +1,7 @@
 import React from 'react';
 const masthead = require("../contents/masthead.json");
 const header = require("../contents/header.json");
+const main = require("../contents/main.json");
 
 import Header from "../templates/components/header.jsx";
 import Masthead from "../templates/components/masthead.jsx";
@@ -13,7 +14,7 @@ class Landing extends React.Component {
       <div className="page-main">
         <Header data={header}/>
         <Masthead data={masthead}/>
-        <Main />
+        <Main data={main}/>
         <Footer />
       </div>
     )

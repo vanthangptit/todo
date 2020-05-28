@@ -1,0 +1,25 @@
+{
+  "aboutUs": {
+    "sectionTitle": {
+      "heading": "About Us",
+      "description": "Redug Lefes dolor sit amet, consectetur adipisicing elit.<br/>Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat"
+    },
+    "introduction": [
+      {
+        "icon": "fa-desktop",
+        "title": "FIT FOR ANY PURPOSE",
+        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+      },
+      {
+        "icon": "fa-sign-in",
+        "title": "100% RESPONSIVE",
+        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+      },
+      {
+        "icon": "fa-paper-plane",
+        "title": "FREE UPDATE & SUPPORT",
+        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+      }
+    ]
+  }
+}

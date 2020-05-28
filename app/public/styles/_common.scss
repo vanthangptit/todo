@@ -79,3 +79,20 @@
     }
   }
 }
+
+@keyframes sonarEffect {
+  0% {
+    opacity: .3
+  }
+
+  40% {
+    opacity: .5;
+    box-shadow: 0 0 0 2px rgba(255,255,255,.1), 0 0 10px 10px #bc2e1d, 0 0 0 10px rgba(255,255,255,.5)
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255,255,255,.1), 0 0 10px 10px #bc2e1d, 0 0 0 10px rgba(255,255,255,.5);
+    transform: scale(1.5);
+    opacity: 0
+  }
+}
