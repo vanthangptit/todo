@@ -1,0 +1,47 @@
+.slick-initialized {
+  padding-bottom: 25px;
+  overflow: hidden;
+
+  .slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+
+    li,
+    button,
+    button::before {
+      width: 13px;
+      height: 13px;
+    }
+
+    li {
+      margin: 0 7.5px 0 0;
+
+      button {
+        &:before {
+          border-radius: 50%;
+          opacity: 1;
+          color: transparent;
+          background-color: #d7d7d7;
+          border: 1px solid #d7d7d7;
+        }
+      }
+
+      &.slick-active button:before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media #{$media-sm} {
+    .slick-dots {
+      li,
+      button,
+      button::before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

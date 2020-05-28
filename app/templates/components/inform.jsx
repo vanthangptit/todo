@@ -1,68 +1,72 @@
 import React from 'react';
-import OutsideClickHandler from 'react-outside-click-handler';
 
 class Inform extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       isLanguageDropdown: false,
     };
 
     this.handleClickLanguageDropdown = this.handleClickLanguageDropdown.bind(this);
-    this.handleRemoveLanguageDropdown = this.handleRemoveLanguageDropdown.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
-  handleClickLanguageDropdown(e) {
-    e.preventDefault();
+  handleClickLanguageDropdown() {
+    if (!this.state.isLanguageDropdown) {
+      document.addEventListener('click', this.handleOutsideClick, false);
+    } else {
+      console.log(this.state.isLanguageDropdown);
+      document.removeEventListener('click', this.handleOutsideClick, false);
+    }
 
-    this.setState(state => ({
-      isLanguageDropdown: !state.isLanguageDropdown
+    this.setState(prevState => ({
+      isShowNavBar: !prevState.isShowNavBar,
     }));
   }
 
-  handleRemoveLanguageDropdown(e) {
-    e.stopPropagation();
+  handleOutsideClick(e) {
+    if (this.pop.contains(e.target)) {
+      return;
+    }
 
-    this.setState(state => ({
-      isLanguageDropdown: false
-    }));
+    this.handleClickLanguageDropdown(e);
   }
 
   render() {
+    const data = this.props;
     const isShowNavBar = this.state.isLanguageDropdown ? ' show' : '';
 
     return (
       <div className="inform">
         <div className="inform__left">
           {
-            this.props.personal.map((item, index) =>
+            data.personal.map((item, index) =>
               <span key={index}>{item}</span>
             )
           }
         </div>
 
         <div className="inform__right">
-          <OutsideClickHandler onOutsideClick={this.handleRemoveLanguageDropdown}>
-            <ul className={"inform__language" + isShowNavBar}>
-              <a href={this.props.language.active.href} onClick={this.handleClickLanguageDropdown}>
-                {this.props.language.active.text}
-              </a>
+          <ul className={"inform__language" + isShowNavBar} ref={node => {this.pop = node}}>
+            <span onClick={this.handleClickLanguageDropdown}>
+              {data.language.activeText}
+            </span>
 
-              <ul>
-                {
-                  this.props.language.dropdown.map((item, index) =>
-                    <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
-                      {item.text}
-                    </a>
-                  )
-                }
-              </ul>
+            <ul>
+              {this.state.isLanguageDropdown && (
+                data.language.dropdown.map((item, index) =>
+                  <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
+                    {item.text}
+                  </a>
+                )
+              )}
             </ul>
-          </OutsideClickHandler>
+          </ul>
 
           <ul className="inform__social">
             {
-              this.props.social.map((item, index) =>
+              data.social.map((item, index) =>
                 <a href={item.href} className={"fa " + item.icon} title={item.title} key={index}/>
               )
             }
