@@ -36,5 +36,43 @@
       "src": "./public/images/work_main.jpg",
       "alt": "Work main of our"
     }
+  },
+  "ourServices": {
+    "sectionTitle": {
+      "heading": "Our Services",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    "services": [
+      {
+        "icon": "fa-code",
+        "title": "Expert Coder",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-camera-retro",
+        "title": "Creative Designer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-wordpress",
+        "title": "Wordpress Developer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-pinterest",
+        "title": "Social Marketer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-bar-chart",
+        "title": "Seo Expart",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-ticket",
+        "title": "24/7 Support",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      }
+    ]
   }
 }

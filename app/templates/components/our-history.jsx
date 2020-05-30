@@ -9,7 +9,7 @@ class OurHistory extends Component {
     const button = this.props.data.button;
 
     return (
-      <section className="our-history bg-tertiary">
+      <section className="our-history bg-tertiary mb-component">
         <div className="our-history__columns">
           <div className="our-history__contain">
             <h5 className="our-history__label">{ourHistory}</h5>

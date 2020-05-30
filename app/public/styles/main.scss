@@ -1,12 +1,4 @@
-@import './colors';
-@import './variables';
-@import './override-variables';
-@import './bootstrap';
-@import "./font-awesome";
-@import './slick';
-@import './fonts';
 @import './common';
-@import './elements';
 
 //components
 @import "./components/header";
@@ -17,3 +9,4 @@
 @import "./components/section-title";
 @import "./components/about-us";
 @import "./components/our-history";
+@import "./components/our-services";
