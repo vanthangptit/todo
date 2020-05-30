@@ -2,23 +2,76 @@
   "aboutUs": {
     "sectionTitle": {
       "heading": "About Us",
-      "description": "Redug Lefes dolor sit amet, consectetur adipisicing elit.<br/>Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat"
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
     },
     "introduction": [
       {
         "icon": "fa-desktop",
         "title": "FIT FOR ANY PURPOSE",
-        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
       },
       {
         "icon": "fa-sign-in",
         "title": "100% RESPONSIVE",
-        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
       },
       {
         "icon": "fa-paper-plane",
         "title": "FREE UPDATE & SUPPORT",
-        "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi."
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+      }
+    ]
+  },
+  "ourHistory": {
+    "ourHistory": "A FEW OF OUR HISTORY",
+    "sectionTitle": {
+      "heading": "Who We Are & What We Do",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    },
+    "button": {
+      "text": "Read more",
+      "href": "#"
+    },
+    "image": {
+      "src": "./public/images/work_main.jpg",
+      "alt": "Work main of our"
+    }
+  },
+  "ourServices": {
+    "sectionTitle": {
+      "heading": "Our Services",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    "services": [
+      {
+        "icon": "fa-code",
+        "title": "Expert Coder",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-camera-retro",
+        "title": "Creative Designer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-wordpress",
+        "title": "Wordpress Developer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-pinterest",
+        "title": "Social Marketer",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-bar-chart",
+        "title": "Seo Expart",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      },
+      {
+        "icon": "fa-ticket",
+        "title": "24/7 Support",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
       }
     ]
   }
