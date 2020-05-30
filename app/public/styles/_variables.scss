@@ -7,10 +7,10 @@ $break-point-1200: 1200px;
 $break-point-1230: 1230px;
 $break-max-point: $break-point-1230;
 
-$media-xs: '(max-width: #{$break-point-576})';
-$media-sm: '(max-width: #{$break-point-768})';
-$media-md: '(max-width: #{$break-point-992})';
-$media-lg: '(max-width: #{$break-point-1200})';
+$media-xs: '(max-width: #{$break-point-576 - 1})';
+$media-sm: '(max-width: #{$break-point-768 - 1})';
+$media-md: '(max-width: #{$break-point-992 - 1})';
+$media-lg: '(max-width: #{$break-point-1200 - 1})';
 
 // font variables
 $font-roboto: 'Roboto', sans-serif;

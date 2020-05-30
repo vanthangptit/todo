@@ -22,12 +22,14 @@ $color-black: #000 !default;
 
 $backgrounds: (
   "primary": #fefefe,
-  "secondary": #001c37
+  "secondary": #001c37,
+  "tertiary": #232a34
 );
 
 $text-bg: (
   "primary": $color-primary,
-  "secondary": $color-secondary
+  "secondary": $color-secondary,
+  "tertiary": $color-secondary
 );
 
 $text-colors: map_merge(
@@ -45,3 +47,4 @@ $bg-language-dropdown: $color-secondary;
 $color-slick-dots: #d7d7d7;
 $color-line-title: rgba(142,144,146,.4);
 $bg-color-icon-about: #f7f7f7;
+$color-our-history-desc: #acb4b6;

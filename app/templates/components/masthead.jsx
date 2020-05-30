@@ -13,13 +13,15 @@ class Masthead extends Component {
     };
 
     return (
-      <Slider {...settings} >
-        {
-          this.props.data.map((item, index) =>
-            <Cards data={item} key={index} className="item"/>
-          )
-        }
-      </Slider>
+      <div className="masthead mb-component">
+        <Slider {...settings} >
+          {
+            this.props.data.map((item, index) =>
+              <Cards data={item} key={index} className="item"/>
+            )
+          }
+        </Slider>
+      </div>
     );
   }
 }
