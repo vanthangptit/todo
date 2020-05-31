@@ -6,28 +6,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex: 0 0 50%;
     max-width: 50%;
   }
 
   &__contain {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 70%;
     height: 100%;
-    margin: auto;
+    width: 100%;
     padding: 40px 15px;
+    text-align: center;
+  }
 
-    .section-title__description {
+  .section-title {
+    &__description {
+      width: 100%;
       font-size: 14px;
       color: $color-our-history-desc;
       padding-top: 20px;
-    }
-
-    .section-title__heading {
-      text-align: center;
     }
   }
 
@@ -41,7 +37,9 @@
     display: flex;
     position: relative;
     height: 100%;
+    width: 100%;
     overflow: hidden;
+    min-height: 1px;
 
     img {
       position: absolute;
@@ -65,6 +63,12 @@
       img {
         height: auto;
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      max-width: 70%;
     }
   }
 
