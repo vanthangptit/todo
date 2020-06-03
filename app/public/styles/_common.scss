@@ -151,11 +151,11 @@ $font-path: '../fonts/';
   box-sizing: border-box;
 }
 ::-moz-selection {
-  background: #feda00;
+  background: $color-tertiary;
   text-shadow: none;
 }
 ::selection {
-  background: #feda00;
+  background: $color-tertiary;
   text-shadow: none;
 }
 html,
@@ -167,7 +167,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: #feda00;
+  -webkit-tap-highlight-color: $color-tertiary;
 }
 body {
   margin: 0;

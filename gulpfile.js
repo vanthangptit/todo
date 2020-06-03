@@ -23,6 +23,7 @@ const paths = {
       'node_modules/slick-carousel/slick/slick.min.js',
       'node_modules/bezier-easing/dist/bezier-easing.min.js',
       'node_modules/jquery.cookie/jquery.cookie.js',
+      'app/public/libs/**/*.js'
     ],
     fonts: [
       'node_modules/slick-carousel/slick/fonts/**/*.*',
@@ -133,6 +134,6 @@ const clean = function() {
   return del(`${dest.dist}`);
 };
 
-gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jQuery', 'fontsVendor', 'scripts', 'staticsVendor', 'jsx', 'scriptsVendor')));
+gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jQuery', 'fontsVendor', 'scripts', 'staticsVendor', 'jsx', 'scriptsVendor' )));
 
 gulp.task('dev', gulp.series('build', server));
