@@ -1,24 +1,37 @@
 $(document).ready(function() {
+  const $root = $('#root');
+  if (!$root) {
+    return;
+  }
 
-  $('.pie-progress').asPieProgress({
-    namespace: 'pie_progress'
+  const $skillsContainer = $('.js-skills-container');
+  const $circularProgressbar = $('.js-circular-progressbar');
+  let flat = false;
+
+  $circularProgressbar.asPieProgress({
+    namespace: 'asPieProgress'
   });
-  $('#button_start').on('click', function() {
-    $('.pie_progress').asPieProgress('start');
-  });
-  $('#button_finish').on('click', function() {
-    $('.pie_progress').asPieProgress('finish');
-  });
-  $('#button_go').on('click', function() {
-    $('.pie_progress').asPieProgress('go', 50);
-  });
-  $('#button_go_percentage').on('click', function() {
-    $('.pie_progress').asPieProgress('go', '50%');
-  });
-  $('#button_stop').on('click', function() {
-    $('.pie_progress').asPieProgress('stop');
-  });
-  $('#button_reset').on('click', function() {
-    $('.pie_progress').asPieProgress('reset');
+
+  function handleScrollActiveProgressbar() {
+    const windowHeight = $(window).outerHeight(true);
+    let windowPageYOffset = window.pageYOffset;
+    let offsetTopElement = $skillsContainer.offset().top;
+
+    let diffDistance = offsetTopElement - (windowPageYOffset + windowHeight * 0.8);
+
+    if (diffDistance > 0) {
+      return;
+    }
+
+    $circularProgressbar.asPieProgress('start');
+  }
+
+  handleScrollActiveProgressbar();
+
+  $(window).on('scroll', function() {
+    if(flat === false) {
+      handleScrollActiveProgressbar();
+      flat = true;
+    }
   });
 });

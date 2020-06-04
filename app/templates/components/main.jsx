@@ -13,7 +13,7 @@ class Main extends React.Component {
         <AboutUs data={data.aboutUs} />
         <OurHistory data={data.ourHistory} />
         <OurServices data={data.ourServices} />
-        <Skills />
+        <Skills data={data.skills}/>
       </main>
     )
   }

@@ -1,4 +1,6 @@
-.pie-progress {
+.circular-progressbar {
+  width: 160px;
+  margin: 10px auto;
   position: relative;
   text-align: center;
   -webkit-transform-style: preserve-3d;
@@ -37,6 +39,7 @@
   }
 
   &__number {
+    color: $color-secondary;
     font-size: 42px;
   }
 
@@ -44,15 +47,10 @@
     margin-top: 32px;
     font-size: 12px;
   }
-}
 
-.pie-progress {
-  width: 160px;
-  margin: 10px auto;
-}
-@media all and (max-width: 768px) {
-  .pie-progress {
-    width: 80%;
-    max-width: 300px;
+  @media #{$media-sm} {
+    width: 200px;
+    max-width: 200px;
   }
 }
+

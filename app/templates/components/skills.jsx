@@ -1,20 +1,25 @@
 import React from 'react';
+import Progressbar from './circular-progressbar.jsx';
 
 class Skills extends React.Component {
   render() {
+    const data = this.props.data;
+
     return (
-      <div className="skills">
-        <div className="row">
-          <div className="pie-progress" role="progressbar" data-goal="100" aria-valuemin="0" aria-valuemax="100">
-            <span className="pie-progress__number">0%</span>
-          </div>
-          <div>
-            <button id="button_start">start()</button>
-            <button id="button_stop">stop()</button>
-            <button id="button_go">go('50')</button>
-            <button id="button_go_percentage">go('50%')</button>
-            <button id="button_finish">finish()</button>
-            <button id="button_reset">reset()</button>
+      <div className="skills js-skills-container" style={{ backgroundImage: `url(${data.backgroundImage})`}}>
+        <div className="container">
+          <div className="skills__row">
+            {data.skillList.map((item, index) => {
+              return (
+                <div className="skills__columns" key={index}>
+                  <Progressbar data={item.percentage}/>
+
+                  <div className="skills__description">
+                    {item.text}
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

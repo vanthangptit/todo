@@ -191,10 +191,10 @@
   var DEFAULTS = {
     namespace: 'asPieProgress',
     classes: {
-      svg: 'pie_progress__svg',
-      element: 'pie_progress',
-      number: 'pie_progress__number',
-      content: 'pie_progress__content'
+      svg: 'circular-progressbar__svg',
+      element: 'circular-progressbar',
+      number: 'circular-progressbar__number',
+      content: 'circular-progressbar__content'
     },
     min: 0,
     max: 100,

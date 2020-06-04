@@ -74,5 +74,26 @@
         "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
       }
     ]
+  },
+  "skills": {
+    "backgroundImage": "./public/images/slide/slide04.png",
+    "skillList": [
+      {
+        "percentage": "90",
+        "text": "HTML5, CSS3, JAVASCRIPT"
+      },
+      {
+        "percentage": "95",
+        "text": "WEB RESPONSIVE"
+      },
+      {
+        "percentage": "100",
+        "text": "TEMPLATE REACT"
+      },
+      {
+        "percentage": "100",
+        "text": "JSON"
+      }
+    ]
   }
 }
