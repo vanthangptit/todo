@@ -2,7 +2,7 @@
   "aboutUs": {
     "sectionTitle": {
       "heading": "About Us",
-      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
     },
     "introduction": [
       {
@@ -33,7 +33,7 @@
       "href": "#"
     },
     "image": {
-      "src": "./public/images/work_main.jpg",
+      "src": "./images/work_main.jpg",
       "alt": "Work main of our"
     }
   },
@@ -72,6 +72,27 @@
         "icon": "fa-ticket",
         "title": "24/7 Support",
         "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+      }
+    ]
+  },
+  "skills": {
+    "backgroundImage": "./images/slide/slide04.png",
+    "skillList": [
+      {
+        "percentage": "90",
+        "text": "HTML5, CSS3, JAVASCRIPT"
+      },
+      {
+        "percentage": "95",
+        "text": "WEB RESPONSIVE"
+      },
+      {
+        "percentage": "100",
+        "text": "TEMPLATE REACT"
+      },
+      {
+        "percentage": "100",
+        "text": "JSON"
       }
     ]
   }

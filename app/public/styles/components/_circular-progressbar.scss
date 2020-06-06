@@ -1,0 +1,26 @@
+.circular-progressbar {
+  position: relative;
+
+  &__animation {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+
+    p {
+      display: none;
+    }
+  }
+
+  &__numbers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+  }
+
+  @media #{$media-sm} {
+    width: 200px;
+    margin: auto;
+  }
+}

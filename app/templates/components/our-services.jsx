@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SectionTitle from "./section-title.jsx";
-import ReactHtmlParser from "react-html-parser";
 
 class OurHistory extends Component {
   render() {
@@ -24,9 +23,7 @@ class OurHistory extends Component {
                   <div className="our-services__content">
                     <h5 className="our-services__title">{item.title}</h5>
 
-                    <p className="our-services__description">
-                      { ReactHtmlParser(item.description) }
-                    </p>
+                    <p className="our-services__description" dangerouslySetInnerHTML={{ __html: item.description }} />
                   </div>
                 </div>
               )
