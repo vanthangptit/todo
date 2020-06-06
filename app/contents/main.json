@@ -33,7 +33,7 @@
       "href": "#"
     },
     "image": {
-      "src": "./public/images/work_main.jpg",
+      "src": "./images/work_main.jpg",
       "alt": "Work main of our"
     }
   },
@@ -76,7 +76,7 @@
     ]
   },
   "skills": {
-    "backgroundImage": "./public/images/slide/slide04.png",
+    "backgroundImage": "./images/slide/slide04.png",
     "skillList": [
       {
         "percentage": "90",

@@ -1,16 +1,29 @@
 $(document).ready(function() {
   const $root = $('#root');
+
   if (!$root) {
     return;
   }
 
   const $skillsContainer = $('.js-skills-container');
-  const $circularProgressbar = $('.js-circular-progressbar');
+  const $circularProgressbar = $('.js-circular-progressbar-animation');
+  const $circularProgressbarNumber = $('.js-circular-progressbar-number');
   let flat = false;
 
-  $circularProgressbar.asPieProgress({
-    namespace: 'asPieProgress'
-  });
+  function settingPercentageLoader() {
+    $circularProgressbar.percentageLoader({
+      valElement: 'p',
+      strokeWidth: 15,
+      bgColor: 'rgba(255, 255, 255, 0.30)',
+      ringColor: '#f2f2f2',
+    });
+  }
+
+  function settingCounterUp() {
+    $circularProgressbarNumber.countUp({
+      time: 1700
+    });
+  }
 
   function handleScrollActiveProgressbar() {
     const windowHeight = $(window).outerHeight(true);
@@ -19,19 +32,18 @@ $(document).ready(function() {
 
     let diffDistance = offsetTopElement - (windowPageYOffset + windowHeight * 0.8);
 
-    if (diffDistance > 0) {
+    if (diffDistance > 0 || flat) {
       return;
     }
 
-    $circularProgressbar.asPieProgress('start');
+    settingCounterUp();
+    settingPercentageLoader();
+    flat = true;
   }
 
   handleScrollActiveProgressbar();
 
   $(window).on('scroll', function() {
-    if(flat === false) {
-      handleScrollActiveProgressbar();
-      flat = true;
-    }
+    handleScrollActiveProgressbar();
   });
 });

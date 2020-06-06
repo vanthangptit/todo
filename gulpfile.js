@@ -23,7 +23,6 @@ const paths = {
       'node_modules/slick-carousel/slick/slick.min.js',
       'node_modules/bezier-easing/dist/bezier-easing.min.js',
       'node_modules/jquery.cookie/jquery.cookie.js',
-      'app/public/libs/**/*.js'
     ],
     fonts: [
       'node_modules/slick-carousel/slick/fonts/**/*.*',
@@ -32,21 +31,23 @@ const paths = {
     statics: [
       'node_modules/slick-carousel/slick/ajax-loader.gif'
     ]
-  }
+  },
+  libs: [ 'app/public/libs/**/*.js' ]
 };
 
 const dest = {
   dist: [ './dist/' ],
-  css: [ './dist/public/css/' ],
-  fonts: [ './dist/public/fonts/' ],
-  images: [ './dist/public/images/' ],
-  scripts: [ './dist/public/scripts/' ],
-  statics: [ './dist/public/images/statics' ],
+  css: [ './dist/css/' ],
+  fonts: [ './dist/fonts/' ],
+  images: [ './dist/images/' ],
+  scripts: [ './dist/scripts/' ],
+  libs: ['./dist/scripts/libs/'],
+  statics: [ './dist/images/statics' ],
 };
 
 gulp.task('html', function() {
   return gulp.src(paths.html)
-    .pipe(concat('landing.html'))
+    .pipe(concat('index.html'))
     .pipe(gulp.dest(dest.dist));
 });
 
@@ -86,6 +87,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(dest.scripts));
 });
 
+gulp.task('libs', function() {
+  return gulp.src(paths.libs)
+    .pipe(gulp.dest(dest.libs));
+});
+
 gulp.task('fontsVendor', function() {
   return gulp.src(paths.vendors.fonts)
     .pipe(gulp.dest(dest.fonts));
@@ -113,9 +119,8 @@ const server = function() {
     port: 8080,
     server: {
       baseDir: [ `${dest.dist}` ],
-      index: 'pages.html'
+      index: 'index.html'
     },
-    startPath: 'landing.html'
   });
 
   // Detect change -> rebuild TS
@@ -125,6 +130,7 @@ const server = function() {
   gulp.watch(paths.vendors.base,  gulp.series('jQuery', reload));
   gulp.watch(paths.js,  gulp.series('scripts', reload));
   gulp.watch(paths.jsx,  gulp.series('jsx', reload));
+  gulp.watch(paths.libs,  gulp.series('libs', reload));
   gulp.watch(paths.vendors.fonts,  gulp.series('fontsVendor', reload));
   gulp.watch(paths.vendors.statics,  gulp.series('staticsVendor', reload));
   gulp.watch(paths.vendors.scripts,  gulp.series('scriptsVendor', reload));
@@ -134,6 +140,6 @@ const clean = function() {
   return del(`${dest.dist}`);
 };
 
-gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jQuery', 'fontsVendor', 'scripts', 'staticsVendor', 'jsx', 'scriptsVendor' )));
+gulp.task('build', gulp.series(clean, gulp.parallel('html', 'styles', 'images', 'jsx', 'jQuery', 'scripts', 'libs', 'fontsVendor', 'staticsVendor', 'scriptsVendor')));
 
 gulp.task('dev', gulp.series('build', server));
