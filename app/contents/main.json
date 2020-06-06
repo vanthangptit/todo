@@ -80,19 +80,19 @@
     "skillList": [
       {
         "percentage": "90",
-        "text": "HTML5, CSS3, JAVASCRIPT"
+        "text": "HTML5, CSS3, <br/>JAVASCRIPT"
       },
       {
         "percentage": "95",
-        "text": "WEB RESPONSIVE"
+        "text": "BOOTSTRAP 4, <br/>SASS, BEM"
       },
       {
         "percentage": "100",
-        "text": "TEMPLATE REACT"
+        "text": "WEB RESPONSIVE,<br/>CROSS-BROWSER"
       },
       {
         "percentage": "100",
-        "text": "JSON"
+        "text": "JQUERY, <br/>JAVASCRIPT FRAMEWORKS"
       }
     ]
   }

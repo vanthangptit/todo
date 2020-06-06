@@ -14,9 +14,7 @@ class Skills extends React.Component {
                 <div className="skills__columns" key={index}>
                   <Progressbar data={item.percentage}/>
 
-                  <div className="skills__description">
-                    {item.text}
-                  </div>
+                  <div className="skills__description" dangerouslySetInnerHTML={{ __html: item.text }} />
                 </div>
               )
             })}
