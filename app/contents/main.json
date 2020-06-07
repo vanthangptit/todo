@@ -79,7 +79,7 @@
     "backgroundImage": "./images/slide/slide04.png",
     "skillList": [
       {
-        "percentage": "90",
+        "percentage": "85",
         "text": "HTML5, CSS3, <br/>JAVASCRIPT"
       },
       {
@@ -87,13 +87,69 @@
         "text": "BOOTSTRAP 4, <br/>SASS, BEM"
       },
       {
-        "percentage": "100",
+        "percentage": "90",
         "text": "WEB RESPONSIVE,<br/>CROSS-BROWSER"
       },
       {
-        "percentage": "100",
-        "text": "JQUERY, <br/>JAVASCRIPT FRAMEWORKS"
+        "percentage": "70",
+        "text": "JAVASCRIPT FRAMEWORKS"
       }
     ]
+  },
+  "faq": {
+    "sectionTitle": {
+      "heading": "Faq Question",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    "collapse": [
+      {
+        "active": true,
+        "button": "Consectetur adipisicing elit.",
+        "text": "Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero.\nRedug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero."
+      },
+      {
+        "button": "Consectetur adipisicing elit.",
+        "text": "Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero.\nRedug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero."
+      },
+      {
+        "button": "Consectetur adipisicing elit.",
+        "text": "Redug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero.\nRedug Lefes dolor sit amet, consectetur adipisicing elit. Aspernatur, tempore, commodi quas mollitia dolore magnam quidem repellat, culpa voluptates laboriosam maiores alias accusamus recusandae vero."
+      }
+    ],
+    "tabs": {
+      "buttonTabs": [
+        {
+          "active": true,
+          "idContentTabs": "tab-project",
+          "text": "Project"
+        },
+        {
+          "idContentTabs": "tab-planning",
+          "text": "Planning"
+        },
+        {
+          "idContentTabs": "tab-success",
+          "text": "Success"
+        }
+      ],
+      "contentTabs": [
+        {
+          "active": true,
+          "id": "tab-project",
+          "title": "Project",
+          "content": "1. Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.\n\nvoluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat."
+        },
+        {
+          "id": "tab-planning",
+          "title": "Planning",
+          "content": "2. Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.\n\nvoluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat."
+        },
+        {
+          "id": "tab-success",
+          "title": "Success",
+          "content": "3. Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.\n\nvoluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat."
+        }
+      ]
+    }
   }
 }

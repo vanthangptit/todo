@@ -6,7 +6,7 @@ class Skills extends React.Component {
     const data = this.props.data;
 
     return (
-      <div className="skills js-skills-container" style={{ backgroundImage: `url(${data.backgroundImage})`}}>
+      <div className="skills js-skills-container mb-component" style={{ backgroundImage: `url(${data.backgroundImage})`}}>
         <div className="container">
           <div className="skills__row">
             {data.skillList.map((item, index) => {
