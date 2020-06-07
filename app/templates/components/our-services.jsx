@@ -11,7 +11,7 @@ class OurHistory extends Component {
         <div className="container">
           <SectionTitle title={sectionTitle}/>
 
-          <article className="our-services__contain">
+          <div className="our-services__contain">
             {
               services.map((item, index) =>
                 <div className="our-services__columns" key={index}>
@@ -28,7 +28,7 @@ class OurHistory extends Component {
                 </div>
               )
             }
-          </article>
+          </div>
         </div>
       </section>
     );

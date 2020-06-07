@@ -151,5 +151,13 @@
         }
       ]
     }
+  },
+  "customerRegister": {
+    "backgroundImage": "./images/slide/slide05.png",
+    "title": "Welcome To Our",
+    "subtitle": "Busuness Lorem ipsum dolor sit amet, consectetur adipiscing elit.luctus est eget congue.",
+    "form": {
+      "text": "Subscribe"
+    }
   }
 }

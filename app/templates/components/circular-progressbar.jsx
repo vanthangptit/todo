@@ -5,7 +5,7 @@ class CircularProgressbar extends React.Component {
     const percentage = this.props.data;
 
     return (
-      <div className="circular-progressbar">
+      <article className="circular-progressbar">
         <div className="circular-progressbar__animation js-circular-progressbar-animation">
           <p>{percentage}%</p>
         </div>
@@ -13,7 +13,7 @@ class CircularProgressbar extends React.Component {
         <div className="circular-progressbar__numbers text-secondary">
           <span className="js-circular-progressbar-number">{percentage}</span>%
         </div>
-      </div>
+      </article>
     )
   }
 }

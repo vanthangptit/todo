@@ -8,7 +8,7 @@ class Skills extends React.Component {
     const tabs = this.props.data.tabs;
 
     return (
-      <div className="faq js-faq">
+      <section className="faq js-faq">
         <div className="container">
           <SectionTitle title={sectionTitle}/>
 
@@ -79,7 +79,7 @@ class Skills extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
