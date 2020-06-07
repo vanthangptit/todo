@@ -1,0 +1,91 @@
+.customer-register {
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 10%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $bg-skills;
+  }
+
+  &__contain {
+    position: relative;
+    z-index: 2;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 44px;
+    color: $color-secondary;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: $color-secondary;
+    font-style: italic;
+  }
+
+  &__form {
+    width: 40%;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+
+    input[type="email"] {
+      color: $color-secondary;
+      padding: 20px 155px 20px 20px;
+      width: 100%;
+      outline: 0;
+      background: transparent;
+      border: 1px solid $border-color-input;
+      border-radius: 40px;
+    }
+
+    button[type="submit"] {
+      color: $color-secondary;
+      font-size: 18px;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      display: block;
+      height: calc(100% - 2px);
+      padding: 0 35px;
+      border: 1px solid transparent;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      background-color: $bg-navbar-nav-mobile;
+      transition: background-color .4s;
+
+      &:hover {
+        background-color: $color-tertiary;
+      }
+    }
+  }
+
+  @media #{$media-md} {
+    &__form {
+      width: 60%;
+    }
+  }
+
+  @media #{$media-xs} {
+    &__form {
+      width: 100%;
+      padding: 0 15px;
+
+      button[type="submit"] {
+        right: 16px;
+      }
+    }
+  }
+}

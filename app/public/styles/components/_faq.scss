@@ -1,0 +1,63 @@
+.faq {
+  $self: &;
+
+  & &__accordion {
+    #{$self}__card {
+      margin-bottom: 5px;
+      border-radius: .25rem;
+      border-bottom: 1px solid rgba(0,0,0,0.125);
+    }
+  }
+
+  .card-header {
+    background-color: transparent;
+  }
+
+  .card-link {
+    position: relative;
+
+    &:not(.collapsed) {
+      color: $color-tertiary;
+
+      &::before {
+        content: '\f107';
+        transition: all 0.4s ease-in-out 0ms;
+      }
+    }
+
+    &::before {
+      content: '\f105';
+      font: 400 18px/1 FontAwesome;
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__nav-tabs {
+    font-size: 18px;
+    font-weight: 400;
+
+    .nav-link.active {
+      color: $color-tertiary;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+
+  &__tab-title {
+    font-size: 25px;
+    font-weight: 400;
+    color: $color-primary;
+    padding: 20px 15px 20px 0;
+  }
+
+  &__tab-content {
+    border: 1px solid $border-color-tabs;
+    border-top: 1px solid transparent;
+    padding: 15px;
+  }
+}

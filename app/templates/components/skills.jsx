@@ -6,7 +6,7 @@ class Skills extends React.Component {
     const data = this.props.data;
 
     return (
-      <div className="skills js-skills-container" style={{ backgroundImage: `url(${data.backgroundImage})`}}>
+      <section className="skills js-skills-container mb-component" style={{ backgroundImage: `url(${data.backgroundImage})`}}>
         <div className="container">
           <div className="skills__row">
             {data.skillList.map((item, index) => {
@@ -14,15 +14,13 @@ class Skills extends React.Component {
                 <div className="skills__columns" key={index}>
                   <Progressbar data={item.percentage}/>
 
-                  <div className="skills__description">
-                    {item.text}
-                  </div>
+                  <div className="skills__description" dangerouslySetInnerHTML={{ __html: item.text }} />
                 </div>
               )
             })}
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
