@@ -159,5 +159,101 @@
     "form": {
       "text": "Subscribe"
     }
+  },
+  "ourSpecialTeam": {
+    "sectionTitle": {
+      "heading": "Our Special Team",
+      "description": "We create our themes with a thought of our customers, therefore our team works hard to provide you best technical support in the world"
+    },
+    "members": [
+      {
+        "image": {
+          "src": "./images/person01.jpg",
+          "alt": "Jhon Mickel"
+        },
+        "social": [
+          {
+            "href": "#",
+            "icon": "fa-facebook"
+          },
+          {
+            "href": "#",
+            "icon": "fa-twitter"
+          },
+          {
+            "href": "#",
+            "icon": "fa-instagram"
+          }
+        ],
+        "name": "Jhon Mickel",
+        "job": "Web Developer"
+      },
+      {
+        "image": {
+          "src": "./images/person02.jpg",
+          "alt": "Natalia Doe"
+        },
+        "social": [
+          {
+            "href": "#",
+            "icon": "fa-facebook"
+          },
+          {
+            "href": "#",
+            "icon": "fa-twitter"
+          },
+          {
+            "href": "#",
+            "icon": "fa-instagram"
+          }
+        ],
+        "name": "Natalia Doe",
+        "job": "Seo"
+      },
+      {
+        "image": {
+          "src": "./images/person03.jpg",
+          "alt": "Jhon Powel"
+        },
+        "social": [
+          {
+            "href": "#",
+            "icon": "fa-facebook"
+          },
+          {
+            "href": "#",
+            "icon": "fa-twitter"
+          },
+          {
+            "href": "#",
+            "icon": "fa-instagram"
+          }
+        ],
+        "name": "Jhon Powel",
+        "job": "Web Developer"
+      },
+      {
+        "image": {
+          "src": "./images/person04.jpg",
+          "alt": "Lellien Linda"
+        },
+        "social": [
+          {
+            "href": "#",
+            "icon": "fa-facebook"
+          },
+          {
+            "href": "#",
+            "icon": "fa-twitter"
+          },
+          {
+            "href": "#",
+            "icon": "fa-instagram"
+          }
+        ],
+        "name": "Lellien Linda",
+        "job": "Web Design"
+      }
+    ]
   }
 }

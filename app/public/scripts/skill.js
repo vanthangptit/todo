@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   function settingCounterUp() {
     $circularProgressbarNumber.countUp({
-      time: 1700
+      time: 1650
     });
   }
 

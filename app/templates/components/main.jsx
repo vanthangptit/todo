@@ -5,6 +5,7 @@ import OurServices from './our-services.jsx';
 import Skills from './skills.jsx';
 import Faq from './faq.jsx';
 import CustomerRegister from './customer-register.jsx';
+import OurSpecialTeam from './our-special-team.jsx';
 
 class Main extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Main extends React.Component {
         <Skills data={data.skills}/>
         <Faq data={data.faq}/>
         <CustomerRegister data={data.customerRegister}/>
+        <OurSpecialTeam data ={data.ourSpecialTeam}/>
       </main>
     )
   }
