@@ -91,7 +91,7 @@
         "text": "WEB RESPONSIVE,<br/>CROSS-BROWSER"
       },
       {
-        "percentage": "70",
+        "percentage": "65",
         "text": "JAVASCRIPT FRAMEWORKS"
       }
     ]
@@ -255,5 +255,16 @@
         "job": "Web Design"
       }
     ]
+  },
+  "workingUs": {
+    "left": {
+      "image": "./images/working_us.png"
+    },
+    "right": {
+      "image": "./images/slide/slide04.png",
+      "title": "WORKING WITH US",
+      "subtitle": "WEB DESIGN, READY HOME, CONSTRUCTION AND CO-OPERATE OUTSTANDING BUILDINGS.",
+      "button": "Contact Us"
+    }
   }
 }

@@ -116,10 +116,10 @@ $font-path: '../fonts/';
 }
 
 .mb-component {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 
   @media #{$media-sm} {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 @each $color, $value in $text-colors {

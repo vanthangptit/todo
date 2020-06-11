@@ -7,7 +7,7 @@ class OurSpecialTeam extends Component {
     const members = this.props.data.members;
 
     return (
-      <section className="our-special-team mb-component">
+      <section className="our-special-team">
         <div className="container">
           <SectionTitle title={sectionTitle}/>
 
