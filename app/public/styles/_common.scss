@@ -38,6 +38,7 @@ $color-our-history-desc: #acb4b6;
 $bg-skills: rgba(0, 0, 0, .75);
 $border-color-tabs: #dee2e6;
 $border-color-input: #eee;
+$bg-member-card: rgba(0,0,0,.4);
 
 // break points
 $break-point-360: 360px;
@@ -115,10 +116,10 @@ $font-path: '../fonts/';
 }
 
 .mb-component {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 
   @media #{$media-sm} {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 @each $color, $value in $text-colors {
