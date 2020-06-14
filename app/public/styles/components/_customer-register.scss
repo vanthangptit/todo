@@ -19,7 +19,7 @@
   &__contain {
     position: relative;
     z-index: 2;
-    padding: 60px 0;
+    padding: 75px 0 85px;
     text-align: center;
   }
 
@@ -75,6 +75,12 @@
   @media #{$media-md} {
     &__form {
       width: 60%;
+    }
+  }
+
+  @media #{$media-sm} {
+    &__contain {
+      padding: 60px 0;
     }
   }
 
