@@ -5,7 +5,9 @@ class WorkingUs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Please write an essay about your favorite DOM element.'
+      name: null,
+      email: null,
+      message: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -13,18 +15,23 @@ class WorkingUs extends Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({
+      name: event.target.value,
+      email: event.target.value,
+      message: event.target.value
+    });
   }
 
   handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
     event.preventDefault();
-  }
 
+    //Code handle submition
+  }
 
   render() {
     const left = this.props.data.left;
     const right = this.props.data.right;
+    const modalId = "working-us-button";
 
     return (
       <section className="working-us mb-component">
@@ -39,20 +46,28 @@ class WorkingUs extends Component {
             <div className="working-us__content text-secondary">
               <h3 className="working-us__title">{right.title}</h3>
               <p className="working-us__subtitle" dangerouslySetInnerHTML={{ __html: right.subtitle }} />
-              <a className="our-history__button js-working-us-button" href="#working-us-button" data-toggle="modal">
+              <a className="our-history__button js-working-us-button" href={'#' + modalId} data-toggle="modal">
                 {right.button}
               </a>
             </div>
           </div>
         </div>
 
-        <Modal id="working-us-button">
-          <form action="#">
+        <Modal id={modalId}>
+          <form action="#" className="form-contact">
             <label>
-              Essay:
-              <textarea value={this.state.value} onChange={this.handleChange} />
+              Name:
+              <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
             </label>
-            <input type="submit" value="Submit" />
+            <label>
+              Email:
+              <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+            </label>
+            <label>
+              Message:
+              <textarea value={this.state.message} name="message" onChange={this.handleChange} />
+            </label>
+            <input className="button-submit" type="submit" value="Submit" />
           </form>
         </Modal>
       </section>
