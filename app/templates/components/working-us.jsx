@@ -15,10 +15,11 @@ class WorkingUs extends Component {
   }
 
   handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+
     this.setState({
-      name: event.target.value,
-      email: event.target.value,
-      message: event.target.value
+      [name]: event.target.value
     });
   }
 

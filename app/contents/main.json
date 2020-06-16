@@ -79,7 +79,7 @@
     "backgroundImage": "./images/slide/slide04.png",
     "skillList": [
       {
-        "percentage": "85",
+        "percentage": "95",
         "text": "HTML5, CSS3, <br/>JAVASCRIPT"
       },
       {
@@ -91,7 +91,7 @@
         "text": "WEB RESPONSIVE,<br/>CROSS-BROWSER"
       },
       {
-        "percentage": "65",
+        "percentage": "75",
         "text": "JAVASCRIPT FRAMEWORKS"
       }
     ]
