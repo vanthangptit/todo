@@ -1,94 +1,48 @@
 import React from "react";
+import SectionTitle from "./section-title.jsx";
 
 class OurPortfolio extends React.Component {
   render() {
+    const sectionTitle = this.props.data.sectionTitle;
+    const buttonList = this.props.data.buttonList;
+    const cards = this.props.data.cards;
+
     return (
-      <section id="our_project">
-        <div className="nvt_main_section">
-          <div className="nvt_standard">
-            <h1>Title</h1>
+      <section className="our-project">
+        <div className="container">
+          <SectionTitle title={sectionTitle}/>
 
-            <article className="nvt_contain_project">
-              <div className="btn_project_top">
-                <div className="btn_fil_pro">
-                  <a href="*" className="btn_filter filter_active">All</a>
-                  <a href=".develop" className="btn_filter">Development</a>
-                  <a href=".design" className="btn_filter">Design</a>
-                  <a href=".ptshop" className="btn_filter">Photoshop</a>
-                </div>
-              </div>
+          <div className="our-project__contain">
+            <div className="our-project__buttons">
+              {
+                buttonList.map((item, indexItem) => {
+                  const active = item.active ? 'active' : '';
 
-              <div className="content_pro_bot">
-                <div className="btn_project_top">
-                  <div className="nvt_standard_section ptshop design">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope02_420x420.jpg" alt="Our one product" />
+                  return (
+                    <a href={item.href} className={'our-project__btn-link ' + active} key={indexItem}>
+                      {item.text}
+                    </a>
+                  )
+                })
+              }
+            </div>
+
+            <div className="our-project__cards">
+              <div className="row">
+                {
+                  cards.map((item, indexItem) =>
+                    <article className={'col-sm-6 col-md-4 mb-component ' + item.classFilter } key={indexItem}>
+                      <div className="our-project__image" style={{ backgroundImage: `url(${item.backgroundImage})`}} />
+
+                      <div className="our-project__textbox">
+                        <h4 className="our-project__title">{item.title}</h4>
+                        <p className="our-project__subtitle">{item.subtitle}</p>
                       </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="nvt_standard_section design">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope03_840x420.jpg" alt="Our one product" />
-                      </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="nvt_standard_section develop">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope04_420x420.jpg" alt="Our one product" />
-                      </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="nvt_standard_section design ptshop">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope05_420x420.jpg" alt="Our one product" />
-                      </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="nvt_standard_section ptshop">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope07_840x420.jpg" alt="Our one product"/>
-                      </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="nvt_standard_section develop ">
-                    <div className="one-our_pro">
-                      <div className="img-pro">
-                        <img src="img/projects/isotope08_420x420.jpg" alt="Our one product"/>
-                      </div>
-                      <div className="desc_project">
-                        <h4>Business City</h4>
-                        <p>Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    </article>
+                  )
+                }
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>

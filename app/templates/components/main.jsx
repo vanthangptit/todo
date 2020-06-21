@@ -7,6 +7,7 @@ import Faq from './faq.jsx';
 import CustomerRegister from './customer-register.jsx';
 import OurSpecialTeam from './our-special-team.jsx';
 import WorkingUs from './working-us.jsx';
+import OurPortfolio from './our-portfolio.jsx';
 
 class Main extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class Main extends React.Component {
         <CustomerRegister data={data.customerRegister}/>
         <OurSpecialTeam data ={data.ourSpecialTeam}/>
         <WorkingUs data ={data.workingUs}/>
+        <OurPortfolio data ={data.ourPortfolio}/>
       </main>
     )
   }

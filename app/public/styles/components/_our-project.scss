@@ -1,0 +1,62 @@
+.our-project {
+  &__buttons {
+    display: block;
+    padding: 15px 30px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__btn-link {
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 16px;
+    color: $color-text-btn;
+    border: 1px solid $color-border-btn;
+    background: $color-secondary;
+    border-radius: 40px;
+    margin: 0 15px;
+    position: relative;
+
+    &:hover,
+    &.active {
+      background: $color-tertiary;
+      color: $color-secondary;
+      transition: .4s;
+    }
+  }
+
+  &__image {
+    padding-bottom: percentage(250/370); //w:370, h:250
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__textbox {
+    display: none;
+  }
+
+  @media #{$media-sm} {
+    &__btn-link {
+      border: none;
+      background: transparent !important;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0;
+
+      &:hover,
+      &.active {
+        background: transparent;
+        color: $color-text-btn;
+        font-weight: 600;
+      }
+
+      &:not(:last-child)::after {
+        content: "/";
+        padding-left: 10px;
+        color: $color-text-btn;
+        font-weight: 400;
+      }
+    }
+  }
+}
