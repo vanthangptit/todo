@@ -15,10 +15,11 @@ class WorkingUs extends Component {
   }
 
   handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+
     this.setState({
-      name: event.target.value,
-      email: event.target.value,
-      message: event.target.value
+      [name]: event.target.value
     });
   }
 
@@ -57,15 +58,15 @@ class WorkingUs extends Component {
           <form action="#" className="form-contact">
             <label>
               Name:
-              <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+              <input type="text" name="name" value={this.state.name ? this.state.name : ''} onChange={this.handleChange} />
             </label>
             <label>
               Email:
-              <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+              <input type="email" name="email" value={this.state.email ? this.state.email : ''} onChange={this.handleChange} required />
             </label>
             <label>
               Message:
-              <textarea value={this.state.message} name="message" onChange={this.handleChange} />
+              <textarea value={this.state.message ? this.state.message : ''} name="message" onChange={this.handleChange} />
             </label>
             <input className="button-submit" type="submit" value="Submit" />
           </form>

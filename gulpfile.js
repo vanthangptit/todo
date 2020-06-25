@@ -89,6 +89,7 @@ gulp.task('scripts', function() {
 
 gulp.task('libs', function() {
   return gulp.src(paths.libs)
+    .pipe(concat('libs.min.js'))
     .pipe(gulp.dest(dest.libs));
 });
 

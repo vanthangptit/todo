@@ -79,7 +79,7 @@
     "backgroundImage": "./images/slide/slide04.png",
     "skillList": [
       {
-        "percentage": "85",
+        "percentage": "95",
         "text": "HTML5, CSS3, <br/>JAVASCRIPT"
       },
       {
@@ -91,7 +91,7 @@
         "text": "WEB RESPONSIVE,<br/>CROSS-BROWSER"
       },
       {
-        "percentage": "65",
+        "percentage": "75",
         "text": "JAVASCRIPT FRAMEWORKS"
       }
     ]
@@ -266,5 +266,68 @@
       "subtitle": "WEB DESIGN, READY HOME, CONSTRUCTION AND CO-OPERATE OUTSTANDING BUILDINGS.",
       "button": "Contact Us"
     }
+  },
+  "ourPortfolio": {
+    "sectionTitle": {
+      "heading": "Our Portfolio",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+    },
+    "buttonList": [
+      {
+        "active": true,
+        "href": "*",
+        "text": "All"
+      },
+      {
+        "href": "develop",
+        "text": "Development"
+      },
+      {
+        "href": "design",
+        "text": "Design"
+      },
+      {
+        "href": "ptshop",
+        "text": "Photoshop"
+      }
+    ],
+    "cards": [
+      {
+        "classFilter": "ptshop design",
+        "backgroundImage": "./images/project/image02_420x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      },
+      {
+        "classFilter": "design",
+        "backgroundImage": "./images/project/image03_840x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      },
+      {
+        "classFilter": "develop",
+        "backgroundImage": "./images/project/image04_420x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      },
+      {
+        "classFilter": "design ptshop",
+        "backgroundImage": "./images/project/image05_420x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      },
+      {
+        "classFilter": "ptshop",
+        "backgroundImage": "./images/project/image07_840x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      },
+      {
+        "classFilter": "develop",
+        "backgroundImage": "./images/project/image08_420x420.jpg",
+        "title": "Business City",
+        "subtitle": "Web Development"
+      }
+    ]
   }
 }
