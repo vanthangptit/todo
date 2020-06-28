@@ -1,6 +1,11 @@
 $padding-card: 12px;
 
 .our-project {
+  &__contain {
+    margin-left: -$padding-card;
+    margin-right: -$padding-card;
+  }
+
   &__buttons {
     display: block;
     padding: 15px 30px;

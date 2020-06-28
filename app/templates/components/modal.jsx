@@ -7,7 +7,11 @@ class Modal extends Component {
            aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered" role="document">
           <div className="modal-content">
-            {this.props.children}
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            { this.props.children }
           </div>
         </div>
       </div>

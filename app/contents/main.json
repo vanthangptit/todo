@@ -329,5 +329,22 @@
         "subtitle": "Web Development"
       }
     ]
+  },
+  "testimonialsArea": {
+    "backgroundImage": "./images/testimonials-area.jpg",
+    "cards": [
+      {
+        "title": "PaulTT",
+        "descriptiion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue. Consectetur adipiscing elit. Sed pulvinar luctus est eget congue."
+      },
+      {
+        "title": "PaulTT",
+        "descriptiion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue. Consectetur adipiscing elit. Sed pulvinar luctus est eget congue."
+      },
+      {
+        "title": "PaulTT",
+        "descriptiion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue. Consectetur adipiscing elit. Sed pulvinar luctus est eget congue."
+      }
+    ]
   }
 }
