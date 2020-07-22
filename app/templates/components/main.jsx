@@ -9,6 +9,7 @@ import OurSpecialTeam from './our-special-team.jsx';
 import WorkingUs from './working-us.jsx';
 import OurPortfolio from './our-portfolio.jsx';
 import TestimonialsArea from './testimonials-area.jsx';
+import Blogs from './blog.jsx';
 
 class Main extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class Main extends React.Component {
         <WorkingUs data ={data.workingUs}/>
         <OurPortfolio data ={data.ourPortfolio}/>
         <TestimonialsArea data ={data.testimonialsArea}/>
+        <Blogs data ={data.blogs}/>
       </main>
     )
   }

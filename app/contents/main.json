@@ -346,5 +346,73 @@
         "descriptiion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue. Consectetur adipiscing elit. Sed pulvinar luctus est eget congue."
       }
     ]
+  },
+  "blogs": {
+    "sectionTitle": {
+      "heading": "Latest News",
+      "description": "We does its work with its customer in mind. That is why you are<br/>getting the best product that will perfectly suit your needs."
+    },
+    "news": [
+      {
+        "image": {
+          "src": "./images/news1.jpg",
+          "alt": "news1"
+        },
+        "comment": {
+          "icon": "fa-comment-o",
+          "text": "13 comment"
+        },
+        "createdDate": {
+          "icon": "fa-calendar",
+          "text": "2016-03-05 / 09:10:16"
+        },
+        "title": "Lorem ipsum dolor sit",
+        "description": "Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.",
+        "link": {
+          "href": "#",
+          "text": "READ MORE"
+        }
+      },
+      {
+        "image": {
+          "src": "./images/news2.jpg",
+          "alt": "news2"
+        },
+        "comment": {
+          "icon": "fa-comment-o",
+          "text": "13 comment"
+        },
+        "createdDate": {
+          "icon": "fa-calendar",
+          "text": "2016-03-05 / 09:10:16"
+        },
+        "title": "Lorem ipsum dolor sit",
+        "description": "Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.",
+        "link": {
+          "href": "#",
+          "text": "READ MORE"
+        }
+      },
+      {
+        "image": {
+          "src": "./images/news3.jpg",
+          "alt": "news3"
+        },
+        "comment": {
+          "icon": "fa-comment-o",
+          "text": "13 comment"
+        },
+        "createdDate": {
+          "icon": "fa-calendar",
+          "text": "2016-03-05 / 09:10:16"
+        },
+        "title": "Lorem ipsum dolor sit",
+        "description": "Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.",
+        "link": {
+          "href": "#",
+          "text": "READ MORE"
+        }
+      }
+    ]
   }
 }
