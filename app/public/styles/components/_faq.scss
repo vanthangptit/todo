@@ -16,6 +16,10 @@
   .card-link {
     position: relative;
 
+    &:hover {
+      color: $color-tertiary;
+    }
+
     &:not(.collapsed) {
       color: $color-tertiary;
 
@@ -39,8 +43,11 @@
     font-size: 18px;
     font-weight: 400;
 
-    .nav-link.active {
-      color: $color-tertiary;
+    .nav-link {
+      &:hover,
+      &.active {
+        color: $color-tertiary;
+      }
     }
   }
 
