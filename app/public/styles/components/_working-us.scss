@@ -1,4 +1,18 @@
 .working-us {
+  .modal-content {
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: transparent;
+      font-size: 22px;
+      padding-left: 13px;
+      padding-right: 13px;
+      cursor: pointer;
+    }
+  }
+
   &__row {
     display: flex;
     flex-wrap: wrap;

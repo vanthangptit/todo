@@ -5,4 +5,5 @@
 
 `3. npm run dev`
 
+# Support screen from 360px up to.
 ### Now, app run on port `8080`
