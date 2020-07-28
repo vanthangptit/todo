@@ -10,6 +10,7 @@ import WorkingUs from './working-us.jsx';
 import OurPortfolio from './our-portfolio.jsx';
 import TestimonialsArea from './testimonials-area.jsx';
 import Blogs from './blog.jsx';
+import ContactUs from './contact-us.jsx';
 
 class Main extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class Main extends React.Component {
         <OurPortfolio data ={data.ourPortfolio}/>
         <TestimonialsArea data ={data.testimonialsArea}/>
         <Blogs data ={data.blogs}/>
+        <ContactUs data ={data.contactUs}/>
       </main>
     )
   }
