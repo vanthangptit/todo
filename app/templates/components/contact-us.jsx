@@ -39,17 +39,17 @@ class ContactUs extends Component {
     const form = this.props.data.form;
 
     return (
-      <section className="contact-us mb-component">
-        <div className="container">
+      <section className="contact-us mb-component" style={{ backgroundImage: `url(${this.props.data.backgroundImage})`}}>
+        <div className="container contact-us__container">
           <SectionTitle title={sectionTitle}/>
 
-          <div className="row contact-us__row">
+          <div className="row contact-us__row text-secondary">
             {
               information.map((item, index) => {
                 return (
                   <div className="col-sm-4 contact-us__columns" key={index}>
                     <div className="contact-us__information">
-                      <span className={"fa " + item.icon} ></span>
+                      <span className={"contact-us__icon fa " + item.icon} ></span>
                       <p dangerouslySetInnerHTML={{ __html: item.topline }} />
                       <p>{item.botline}</p>
                     </div>
@@ -60,7 +60,7 @@ class ContactUs extends Component {
           </div>
 
           <div className="row">
-            <div className="col-sm-6">
+            <div className="col-md-6 mb-5">
               <Iframe url={embed.src}
                       width={embed.width}
                       height={embed.height}
@@ -76,7 +76,7 @@ class ContactUs extends Component {
               />
             </div>
 
-            <div className="col-sm-6">
+            <div className="col-md-6 mb-5">
               <form action="#" className="form-contact-us">
                 <input type={form.name.type}
                        name={form.name.name}
@@ -104,12 +104,10 @@ class ContactUs extends Component {
                           name={form.textarea.name}
                           onChange={this.handleChange}
                           placeholder={form.textarea.placeholder}
+                          rows={form.textarea.rows}
                 />
 
-                <input className="button-submit"
-                       type="submit"
-                       value="Send Message"
-                />
+                <button className="our-history__button js-button-submit" type="submit">{form.buttonSubmit}</button>
               </form>
             </div>
           </div>

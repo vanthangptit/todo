@@ -416,6 +416,7 @@
     ]
   },
   "contactUs": {
+    "backgroundImage": "./images/contact-us.jpg",
     "sectionTitle": {
       "heading": "Latest News",
       "description": "We does its work with its customer in mind. That is why you are<br/>getting the best product that will perfectly suit your needs."
@@ -460,8 +461,10 @@
       },
       "textarea": {
         "name": "message",
-        "placeholder": "Message"
-      }
+        "placeholder": "Message",
+        "rows": "8"
+      },
+      "buttonSubmit": "Send Message"
     }
   }
 }
