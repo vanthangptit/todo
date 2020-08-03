@@ -414,5 +414,57 @@
         }
       }
     ]
+  },
+  "contactUs": {
+    "backgroundImage": "./images/contact-us.jpg",
+    "sectionTitle": {
+      "heading": "Latest News",
+      "description": "We does its work with its customer in mind. That is why you are<br/>getting the best product that will perfectly suit your needs."
+    },
+    "information": [
+      {
+        "icon": "fa-mobile",
+        "topline": "Call: <span>+1 123 123 1234</span>",
+        "botline": "Monday-Friday (9am-5pm)"
+      },
+      {
+        "icon": "fa-envelope-o",
+        "topline": "Email: <span>info@example.com</span>",
+        "botline": "Web: www.example.com"
+      },
+      {
+        "icon": "fa-map-marker",
+        "topline": "Location: <span>A108 Adam Street</span>",
+        "botline": "NY 535022, USA"
+      }
+    ],
+    "embed": {
+      "src": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId",
+      "width": 500,
+      "height": 500
+    },
+    "form": {
+      "name": {
+        "name": "name",
+        "type": "text",
+        "placeholder": "Your Name"
+      },
+      "email": {
+        "name": "email",
+        "type": "email",
+        "placeholder": "Your Email"
+      },
+      "address": {
+        "name": "address",
+        "type": "text",
+        "placeholder": "Address"
+      },
+      "textarea": {
+        "name": "message",
+        "placeholder": "Message",
+        "rows": "8"
+      },
+      "buttonSubmit": "Send Message"
+    }
   }
 }

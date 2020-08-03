@@ -1,0 +1,101 @@
+.contact-us {
+  padding-top: 65px;
+  padding-bottom: 55px;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    z-index: $layout-0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color-contact-us;
+  }
+
+  &__container {
+    position: relative;
+    z-index: $layout-1;
+  }
+
+  .section-title {
+    color: $color-secondary;
+  }
+
+  &__columns {
+    text-align: center;
+  }
+
+  &__information {
+    margin-bottom: 35px;
+
+    p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    &::before {
+      font-size: 24px;
+      border: 1px solid $color-border-card;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      display: inline-block;
+      line-height: 50px;
+      margin-bottom: 20px;
+      color: $color-secondary;
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+  }
+
+  @media #{$media-sm} {
+    padding-top: 35px;
+    padding-bottom: 25px;
+
+    &__information {
+      margin-bottom: 25px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.form-contact-us {
+  text-align: center;
+
+  input,
+  textarea {
+    display: block;
+    font-size: 16px;
+    padding: 15px 20px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  textarea {
+    border-radius: 4px;
+    outline: none;
+  };
+
+  .our-history__button {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+
+    &:hover {
+      color: $color-tertiary;
+      border: 1px solid $color-tertiary;
+    }
+  }
+}

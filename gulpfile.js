@@ -117,7 +117,7 @@ const reload = function(done) {
 const server = function() {
   browserSync.init({
     notify: false,
-    port: 8080,
+    port: 8081,
     server: {
       baseDir: [ `${dest.dist}` ],
       index: 'index.html'
