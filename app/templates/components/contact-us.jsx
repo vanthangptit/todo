@@ -64,8 +64,7 @@ class ContactUs extends Component {
               <Iframe url={embed.src}
                       width={embed.width}
                       height={embed.height}
-                      id="myId"
-                      className="myClassname"
+                      className="contact-us__iframe"
                       display="initial"
                       position="relative"
                       style="border:none;overflow:hidden"
