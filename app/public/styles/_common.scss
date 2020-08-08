@@ -260,6 +260,14 @@ $font-path: '../fonts/';
     opacity: 0
   }
 }
+@keyframes downEnterAnimation {
+  0%   {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 body {
   margin: 0;
   font-family: $font-family-base;
@@ -275,4 +283,7 @@ a {
   &:focus {
     outline: none;
   }
+}
+.hidden-scroll {
+  overflow: hidden;
 }
