@@ -51,10 +51,6 @@
     }
   }
 
-  &__description {
-    font-size: 14px;
-  }
-
   &__tab-title {
     font-size: 25px;
     font-weight: 400;
@@ -66,5 +62,11 @@
     border: 1px solid $border-color-tabs;
     border-top: 1px solid transparent;
     padding: 15px;
+  }
+
+  @media #{$media-sm} {
+    &__description {
+      font-size: 14px;
+    }
   }
 }

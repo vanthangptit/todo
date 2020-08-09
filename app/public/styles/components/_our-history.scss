@@ -57,6 +57,7 @@
     padding: 15px 30px;
     border-radius: 30px;
     transition: all 0.2s ease-in-out 0s;
+    font-size: 16px;
 
     &:hover {
       color: $color-tertiary;
@@ -100,6 +101,10 @@
 
     &__image {
       padding-bottom: percentage(514/960);
+    }
+
+    &__button {
+      font-size: 14px;
     }
   }
 

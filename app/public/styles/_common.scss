@@ -16,6 +16,7 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
 }
 html {
   font-family: sans-serif;
@@ -147,6 +148,9 @@ $bg-color-card: rgba(0, 0, 0, .8);
 $bg-box-card: rgba(0, 0, 0, .7);
 $color-border-card: #ddd;
 $bg-color-contact-us: rgba(0, 0, 0, 0.6);
+$color-logo-footer: #222;
+$color-social-link: #444;
+$bg-color-footer-bottom: #f1f1f1;
 
 // break points
 $break-point-360: 360px;
@@ -260,6 +264,14 @@ $font-path: '../fonts/';
     opacity: 0
   }
 }
+@keyframes downEnterAnimation {
+  0%   {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 body {
   margin: 0;
   font-family: $font-family-base;
@@ -275,4 +287,7 @@ a {
   &:focus {
     outline: none;
   }
+}
+.hidden-scroll {
+  overflow: hidden;
 }

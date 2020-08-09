@@ -16,8 +16,12 @@ class HeaderTop extends React.Component {
 
   handleShowMenu() {
     if (!this.state.isShowNavBar) {
+      document.getElementById('body').classList.add('hidden-scroll');
+
       document.addEventListener('click', this.handleOutsideClick, false);
     } else {
+      document.getElementById('body').classList.remove('hidden-scroll');
+
       document.removeEventListener('click', this.handleOutsideClick, false);
     }
 
@@ -77,7 +81,7 @@ class HeaderTop extends React.Component {
                         {items.text}
                       </a>
 
-                      <ul>
+                      <ul className="bg-secondary">
                         {items.subItems.map((item, indexItem) => {
                           return (
                             <li className="navbar-nav__item" key={indexItem}>

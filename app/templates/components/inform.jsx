@@ -16,12 +16,11 @@ class Inform extends React.Component {
     if (!this.state.isLanguageDropdown) {
       document.addEventListener('click', this.handleOutsideClick, false);
     } else {
-      console.log(this.state.isLanguageDropdown);
       document.removeEventListener('click', this.handleOutsideClick, false);
     }
 
     this.setState(prevState => ({
-      isShowNavBar: !prevState.isShowNavBar,
+      isLanguageDropdown: !prevState.isLanguageDropdown,
     }));
   }
 
@@ -54,13 +53,15 @@ class Inform extends React.Component {
             </span>
 
             <ul>
-              {this.state.isLanguageDropdown && (
-                data.language.dropdown.map((item, index) =>
-                  <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
-                    {item.text}
-                  </a>
+              {
+                this.state.isLanguageDropdown && (
+                  data.language.dropdown.map((item, index) =>
+                    <a className="text-primary" href={item.href} aria-disabled={item.disabled} key={index}>
+                      {item.text}
+                    </a>
+                  )
                 )
-              )}
+              }
             </ul>
           </ul>
 
