@@ -73,7 +73,6 @@
   }
 
   &__description {
-    font-size: 15px;
     font-weight: 300;
     text-align: justify;
   }
@@ -83,6 +82,10 @@
       max-width: 100%;
       flex: 0 0 100%;
       margin-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 14px;
     }
   }
 }

@@ -62,7 +62,7 @@
       margin-bottom: 25px;
 
       p {
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   }
@@ -96,6 +96,13 @@
     &:hover {
       color: $color-tertiary;
       border: 1px solid $color-tertiary;
+    }
+  }
+
+  @media #{$media-sm} {
+    input,
+    textarea {
+      font-size: 14px;
     }
   }
 }
