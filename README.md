@@ -3,7 +3,7 @@
 
 `2. npm i -g gulp-cli`
 
-`3. npm run dev`
+`3. npm run start`
 
 # Support screen from 360px up to.
-### Now, app run on port `8080`
+# Now, app run on port `8080`
