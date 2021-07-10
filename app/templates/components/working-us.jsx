@@ -26,7 +26,7 @@ class WorkingUs extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    //Code handle submition
+    //Code handle submission
   }
 
   render() {
@@ -61,7 +61,7 @@ class WorkingUs extends Component {
               <input type="text" name="name" value={this.state.name ? this.state.name : ''} onChange={this.handleChange} />
             </label>
             <label>
-              Email:
+              Email<span style={{color: "red"}}>*</span>:
               <input type="email" name="email" value={this.state.email ? this.state.email : ''} onChange={this.handleChange} required />
             </label>
             <label>
