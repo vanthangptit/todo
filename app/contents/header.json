@@ -1,13 +1,13 @@
 {
   "logo": {
-    "text": "TNV",
+    "text": "LOGO",
     "href": "#",
     "alt": "Home Page"
   },
   "personal": [
-    "Đắc Sở - Hoài Đức - Hà Nội",
-    "0383.249.189",
-    "nguyenthang.FE@gmail.com"
+    "Duy Tan street - Cau Giay - Ha Noi",
+    "012 345-6789",
+    "example@gmail.com"
   ],
   "language": {
     "activeText": "Vietnamese",
