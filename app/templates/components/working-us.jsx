@@ -38,9 +38,7 @@ class WorkingUs extends Component {
       <section className="working-us mb-component">
         <div className="working-us__row">
           <div className="working-us__columns">
-            <div className="working-us__image">
-              <img src={`${left.image}`} alt=""/>
-            </div>
+            <div className="working-us__image" style={{ backgroundImage: `url(${left.image})`}}></div>
           </div>
 
           <div className="working-us__columns working-us__columns--backdrop" style={{ backgroundImage: `url(${right.image})`}}>

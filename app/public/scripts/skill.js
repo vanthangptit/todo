@@ -1,11 +1,11 @@
 $(document).ready(function() {
   const $root = $('#root');
-
-  if (!$root) {
-    return;
-  }
-
   const $skillsContainer = $('.js-skills-container');
+
+  if (!$root || !$root.length) return;
+
+  if (!$skillsContainer || !$skillsContainer.length) return;
+
   const $circularProgressbarAnimation = $('.js-circular-progressbar-animation');
   const $circularProgressbarNumber = $('.js-circular-progressbar-number');
   let flat = false;

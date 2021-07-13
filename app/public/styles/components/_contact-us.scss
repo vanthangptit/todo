@@ -23,6 +23,11 @@
     color: $color-secondary;
   }
 
+  &__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__columns {
     text-align: center;
   }

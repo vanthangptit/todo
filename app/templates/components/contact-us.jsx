@@ -29,13 +29,12 @@ class ContactUs extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    //Code handle submition
+    //Code handle submission
   }
 
   render() {
     const sectionTitle = this.props.data.sectionTitle;
     const information = this.props.data.information;
-    const embed = this.props.data.embed;
     const form = this.props.data.form;
 
     return (
@@ -43,39 +42,25 @@ class ContactUs extends Component {
         <div className="container contact-us__container">
           <SectionTitle title={sectionTitle}/>
 
-          <div className="row contact-us__row text-secondary">
-            {
-              information.map((item, index) => {
-                return (
-                  <div className="col-sm-4 contact-us__columns" key={index}>
-                    <div className="contact-us__information">
-                      <span className={"contact-us__icon fa " + item.icon} ></span>
-                      <p dangerouslySetInnerHTML={{ __html: item.topline }} />
-                      <p>{item.botline}</p>
-                    </div>
-                  </div>
-                )
-              })
-            }
-          </div>
-
           <div className="row">
-            <div className="col-md-6 mb-5">
-              <Iframe url={embed.src}
-                      width={embed.width}
-                      height={embed.height}
-                      className="contact-us__iframe"
-                      display="initial"
-                      position="relative"
-                      style="border:none;overflow:hidden"
-                      scrolling="no"
-                      frameBorder="0"
-                      allowTransparency="true"
-                      allow="encrypted-media"
-              />
+            <div className="col-md-7 mb-5">
+              <div className="row contact-us__row text-secondary">
+                {
+                  information.map((item, index) => {
+                    return (
+                      <div className="col-6 contact-us__columns" key={index}>
+                        <div className="contact-us__information">
+                          <span className={"contact-us__icon fa " + item.icon} ></span>
+                          <p dangerouslySetInnerHTML={{ __html: item.topline }} />
+                          <p>{item.botline}</p>
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+              </div>
             </div>
-
-            <div className="col-md-6 mb-5">
+            <div className="col-md-5 mb-5">
               <form action="#" className="form-contact-us">
                 <input type={form.name.type}
                        name={form.name.name}
