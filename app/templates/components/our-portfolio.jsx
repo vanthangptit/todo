@@ -2,6 +2,19 @@ import React from "react";
 import SectionTitle from "./section-title.jsx";
 
 class OurPortfolio extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(index) {
+    this.setState({ activeIndex: index });
+  };
+
   render() {
     const sectionTitle = this.props.data.sectionTitle;
     const buttonList = this.props.data.buttonList;
@@ -16,11 +29,12 @@ class OurPortfolio extends React.Component {
             <div className="our-project__buttons">
               {
                 buttonList.map((item, indexItem) => {
-                  const active = item.active ? 'active' : '';
-                  const href = item.href === '*' ? '*': `.${item.href}`;
+                  const active = indexItem === this.state.activeIndex ? 'active' : '';
+                  const href = item.href === '*' ? '*' : `.${item.href}`;
 
                   return (
-                    <a href={href} className={'our-project__btn-link js-our-project-button-link ' + active} key={indexItem}>
+                    <a href={href} className={'our-project__btn-link js-our-project-button-link ' + active} key={indexItem}
+                       onClick={this.handleClick.bind(this, indexItem)}>
                       {item.text}
                     </a>
                   )

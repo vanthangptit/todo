@@ -7,7 +7,6 @@ $(document).ready(function() {
 
   const ourProjectCard = '.js-our-project-card';
   const $ourProjectCards = $('.js-our-project-cards');
-  const $ourProjectButtonLink = $('.js-our-project-button-link');
 
   const $loadPro = $ourProjectCards.isotope({
     // init Isotope
